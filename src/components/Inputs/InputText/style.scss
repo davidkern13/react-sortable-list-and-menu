@@ -1,0 +1,15 @@
+@import '../../../style/_base';
+
+input[type="text"] {
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    min-width: 300px;
+    outline: none;
+    color: $dark-color;
+    font-size: 0.8rem;
+
+    background-repeat: no-repeat;
+    background-position: right 9px top 3px;
+    background-size: 17px;
+}

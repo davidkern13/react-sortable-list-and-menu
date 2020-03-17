@@ -1,0 +1,18 @@
+@import '../../style/media-query/style.scss';
+
+.contact-list-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include tablet {
+       max-width: 750px;
+    }
+
+     @include tablet-small {
+       max-width: 500px;
+     }
+
+     @include phone {
+        max-width: 320px;
+     }
+}

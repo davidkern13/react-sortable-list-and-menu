@@ -1,0 +1,107 @@
+@import '../style/media-query/style.scss';
+@import '../style/_base';
+
+header {
+  top: 0;
+  height: 60px;
+  width: 100%;
+
+  @include position-fixed;
+  z-index: 1000;
+
+  @include flex-center;
+  @include flex-space-between;
+
+  background-color: $blue-color;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  > .side-bar {
+      > .logo-navbar {
+             margin: 0px 0px 0px 20px;
+             color: $white-color;
+       }
+  }
+
+  > .autocomplete-navbar{
+     margin: 0px 20px 0px 0px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  @include tablet-small {
+
+     .hamburger {
+        display: block;
+        left: 0px;
+        top: 0px;
+        width: 60px;
+        height: 60px;
+        @include position-absolute;
+
+        > label {
+            display: block;
+            width: auto;
+            height: auto;
+            margin: 20px 0px 0px 15px;
+            cursor:pointer;
+
+            > span {
+                display: block;
+                width: 25px;
+                height: 5px;
+                border-top: 2px solid #eee;
+             }
+        }
+      }
+
+      .side-bar {
+          width: 250px;
+          @include position-fixed;
+          background-color: $white-color;
+          height: 100vh;
+          top: 60px;
+          z-index: 10000;
+          padding:20px 0px;
+          @include transition;
+
+           > .logo-navbar {
+               color: $black-color;
+           }
+      }
+
+      .open-menu__false{
+        transform: translateX(-250px);
+      }
+
+      .autocomplete-navbar {
+              margin: 0px 0px 0px 0px;
+              width: 100%;
+              align-items: flex-end;
+              @include flex;
+              justify-content: flex-end;
+
+              > .autocomplete-container {
+                    width: calc(100% - 80px);
+                    @include flex;
+                    justify-content: flex-end;
+
+                    input[type=text] {
+                        width: 0px;
+                        min-width: 0px;
+                        cursor: pointer;
+                        background-position: right 7px top 3px;
+                        margin: 0px 15px 0px 0px;
+
+                        @include transition;
+
+                        &:focus {
+                            min-width: 0px;
+                            width: 100%;
+                        }
+                    }
+              }
+          }
+  }
+}

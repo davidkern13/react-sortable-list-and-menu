@@ -1,0 +1,39 @@
+$blue-color: #20B8EA;
+$white-color: #fff;
+$black-color: #20B8EA;
+$dark-color: #38393E;
+$grey-light-color: #eee;
+$grey-dark-color: #ACACAC;
+
+/* FLEX */
+@mixin flex {
+  display:flex;
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  justify-content: space-between;
+}
+
+/* POSITION */
+
+@mixin position-absolute {
+  position: absolute;
+}
+@mixin position-fixed{
+  position: fixed;
+}
+@mixin position-relative{
+  position: relative;
+}
+
+/* ANIMATION */
+
+@mixin transition {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}

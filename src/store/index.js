@@ -3,7 +3,7 @@ import rootSaga from './saga';
 
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './reducers';
-import monitorReducersEnhancer from '../enhancers/monitorReducer';
+//import monitorReducersEnhancer from '../enhancers/monitorReducer';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -13,7 +13,7 @@ export function initialStore(){
      const middleware = [sagaMiddleware];
      const middlewareEnhancer = applyMiddleware(...middleware);
 
-     const enhancers = [middlewareEnhancer, monitorReducersEnhancer];
+     const enhancers = [middlewareEnhancer]; //monitorReducersEnhancer
      const composedEnhancers = composeWithDevTools(...enhancers);
 
      const store = createStore(rootReducer, composedEnhancers);

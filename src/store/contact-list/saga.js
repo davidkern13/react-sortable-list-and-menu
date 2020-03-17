@@ -19,7 +19,7 @@ function* getContactList({ payload }) {
             }
         );
 
-        if (response.status === 200 && response.statusText === "OK") {
+        if (response.status === 200 && response.data.length) {
             const list = yield response.data;
 
             yield put(getData(list));

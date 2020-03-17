@@ -95,8 +95,8 @@
                       object-fit: cover;
                  }
 
-                 .portrait {
-                     height: auto;
+                .portrait {
+                     height: auto !important;
                  }
              }
          }

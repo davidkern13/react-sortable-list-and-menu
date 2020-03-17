@@ -26,7 +26,7 @@ const ContactsList = () => {
         let data = contactList.data || [];
         let search_value = searchItem.value || false;
 
-        if(data.length > 0 && search_value){
+        if(data.length && search_value){
             let filtered_data = filterList(contactList.data, search_value);
             return filtered_data;
         }

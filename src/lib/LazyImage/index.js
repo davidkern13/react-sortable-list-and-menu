@@ -27,7 +27,7 @@ export default function LazyImage(props) {
 
     return (
         <div className={'image-wrap'}>
-           { (error || !loaded) ? <Img src={unloadedSrc} alt={alt} classStyle={checkLandscape(src)}/> : <Img src={src} alt={alt} classStyle={checkLandscape(src)}/>}
+           { (error || !loaded) ? <Img src={unloadedSrc} alt={alt} classStyle={'error'}/> : <Img src={src} alt={alt} classStyle={checkLandscape(src)}/>}
         </div>
     )
 }

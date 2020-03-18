@@ -38,7 +38,7 @@ const GridList = ({ list = [] }) => {
             }
          </div>
 
-        { !list.length && <div className={'EmptyList'}><Img src={emptyList} alt={'List is empty'}/> <p>List is empty</p></div>}
+        { list === null && <div className={'EmptyList'}><Img src={emptyList} alt={'List is empty'}/> <p>List is empty</p></div>}
 
      </>
 

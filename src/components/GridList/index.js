@@ -5,7 +5,7 @@ import './style.scss';
 import Img from '../../components/Image';
 import LazyImage from '../../lib/LazyImage';
 
-import { unloadedSrc } from '../../enum';
+import { unloadedSrc, emptyList } from '../../enum';
 import { getLogoByDriverType, charLimit } from '../../utils';
 
 const default_chars = 15;
@@ -16,7 +16,8 @@ const GridList = ({ list = [] }) => {
     return (
      <div id={'GridList'} className={'grid-container'}>
         {
-            list && list.map( (item, idx) => {
+            list.length && list ?
+            list.map( (item, idx) => {
                 return (
                     <div className={'grid-item'} key={item.name + idx}>
                         <div className={'item-wrap'}>
@@ -34,6 +35,8 @@ const GridList = ({ list = [] }) => {
                     </div>
                 );
             })
+            :
+            <div className={'EmptyList'}><Img src={emptyList} alt={'List is empty'}/> <p>List is empty</p></div>
         }
 
      </div>

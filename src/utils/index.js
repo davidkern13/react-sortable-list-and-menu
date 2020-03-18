@@ -29,7 +29,7 @@ export const filterList = (list, value) => {
                    ||
                    (driverRank && driverRank.includes(value))
                    ||
-                   (phone && phone.includes(value))
+                   (phone && phone.includes(value)) ? item : null;
     });
 
 };

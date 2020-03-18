@@ -31,7 +31,7 @@ export const filterList = (list, value) => {
                    ||
                    (phone && phone.includes(value))
                    ||
-                   "Not Found";
+                   "Not Found"
     });
 
 };
